@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="ethereum_config_form_view">
+			<field name="name">ethereum.config</field>
+			<field name="model">ethereum.config</field>
+			<field name="arch" type="xml">
+				<form string="Ethereum config">
+					<sheet>
+						<group>
+						   <field name="ethereum_address"/>
+						   <field name="ethereum_interface" />
+						   <field name="ethereum_node" />
+						</group>
+					</sheet>
+					
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="ethereum_config_tree_view">
+			<field name="name">ethereum.config</field>
+			<field name="model">ethereum.config</field>
+			<field name="arch" type="xml">
+				<tree string="Ethereum config">
+				          <field name="ethereum_address" />
+				          <field name="ethereum_interface" />
+				          <field name="ethereum_node" />  
+				          
+				</tree>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="ethereum_config_action">
+			<field name="name">Ethereum setting</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ethereum.config</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="darf_signature.ethereum_config_tree_view" />
+		</record>
+		<menuitem name="Ethereum Config" id="ethereum_config_page_menu"
+			parent="sales_team.menu_sales" action="ethereum_config_action"
+			sequence="20" />
+	</data>
+</odoo>
