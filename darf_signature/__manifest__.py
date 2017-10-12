@@ -12,6 +12,7 @@
                 'website_portal',
                 'website_payment',],
     'author': "DarfChain",
+    'images': ['images/main.png'],
     'category': 'Application',
     'description': """
     Module for ethereum signature for sale order
