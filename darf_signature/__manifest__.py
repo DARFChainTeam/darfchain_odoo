@@ -11,7 +11,7 @@
                 'portal_sale',
                 'website_portal',
                 'website_payment',],
-    'author': "Sergey Stepanets",
+    'author': "DarfChain",
     'category': 'Application',
     'description': """
     Module for ethereum signature for sale order
